@@ -1,0 +1,81 @@
+<html><pre>
+<body>
+
+1   <font color='#FF00FF'> #include&lt;stdio.h&gt;</font>
+2   <font color='#000080'><b>int</b></font> <font color='#000080'>checkPrimeNumber</font>( <font color='#000080'><b>int</b></font> <font color='#000080'>n</font>) ;
+3   
+4   <font color='#000080'><b>int</b></font> <font color='#000080'>main</font>( ) 
+5   
+6   {
+7       
+8           <font color='#000080'><b>int</b></font> <font color='#000080'>n1</font>, <font color='#000080'>n2</font>, <font color='#000080'>i</font>, <font color='#000080'>flag</font>;
+9       
+10      
+11          <font color='#000080'>printf</font>( <font color='#FF0000'> "Enter two positive integers: "</font>) ;
+12      
+13          <font color='#000080'>scanf</font>( <font color='#FF0000'> "%d %d"</font>, &<font color='#000080'>n1</font>, &<font color='#000080'>n2</font>) ;
+14      
+15          <font color='#000080'>printf</font>( <font color='#FF0000'> "Prime numbers between %d and %d are: "</font>, <font color='#000080'>n1</font>, <font color='#000080'>n2</font>) ;
+16      
+17      
+18          <font color='#000080'><b>for</b></font>( <font color='#000080'>i</font>=<font color='#000080'>n1</font>+1;  <font color='#000080'>i</font><<font color='#000080'>n2</font>;  ++<font color='#000080'>i</font>) 
+19          
+20      {
+21          
+22                  <font color='#00FF00'>
+23          // i is a prime number, flag will be equal to 1</font>
+24                  <font color='#000080'>flag</font> = <font color='#000080'>checkPrimeNumber</font>( <font color='#000080'>i</font>) ;
+25          
+26          
+27                  <font color='#000080'><b>if</b></font>( <font color='#000080'>flag</font> == 1) 
+28          {
+29              
+30                          <font color='#000080'>printf</font>( <font color='#FF0000'> "%d "</font>,<font color='#000080'>i</font>) ;
+31              
+32              
+33          }
+34          
+35              
+36      }
+37      
+38          <font color='#000080'><b>return</b></font> 0;
+39      
+40      
+41  }
+42  
+43  
+44  <font color='#00FF00'>
+45  // user-defined function to check prime number</font>
+46  <font color='#000080'><b>int</b></font> <font color='#000080'>checkPrimeNumber</font>( <font color='#000080'><b>int</b></font> <font color='#000080'>n</font>) 
+47  
+48  {
+49      
+50          <font color='#000080'><b>int</b></font> <font color='#000080'>j</font>, <font color='#000080'>flag</font> = 1;
+51      
+52      
+53          <font color='#000080'><b>for</b></font>( <font color='#000080'>j</font>=2;  <font color='#000080'>j</font> <= <font color='#000080'>n</font>/2;  ++<font color='#000080'>j</font>) 
+54          
+55      {
+56          
+57                  <font color='#000080'><b>if</b></font> ( <font color='#000080'>n</font>%<font color='#000080'>j</font> == 0) 
+58                  
+59          {
+60              
+61                          <font color='#000080'>flag</font> =0;
+62              
+63                          <font color='#000080'><b>break</b></font>;
+64              
+65                      
+66          }
+67          
+68              
+69      }
+70      
+71          <font color='#000080'><b>return</b></font> <font color='#000080'>flag</font>;
+72      
+73      
+74  }
+75  
+76  </body>
+
+</pre></html>
